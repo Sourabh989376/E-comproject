@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --primary: indianred;
+    --secondary: rgba(15, 10, 29, 0.849);
+    --light: #2f3640;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.nav1 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 3px gray;
+    text-align: center;
+}
+
+.nav1.left {
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+
+.nav1 .left a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0px 5px;
+}
+.right{
+    flex-basis: 50%;
+}
+.right i{
+    font-size: 20px;
+    margin: 0px 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border-radius: 3px;
+}
+.nav1 .right i:hover{
+    transform: rotate(360deg);
+}
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.nav2 .nav2left,.nav2 .nav2center,.nav2 .nav2right{
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+.nav2 .nav2left i{
+    margin-left:40px ;
+}
+.nav2 .nav2center h1{
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.nav2 .nav2center h1 span{
+    color: var(--secondary);
+}
+.nav2 .nav2center p{
+    color: gray;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.nav2 .nav2right i{
+    margin: 0px 6px;
+}
+
+.nav3{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+}
+.nav3 ul li{
+    display: inline-block;
+    width: 160px; 
+    position: relative;
+    z-index: 99;
+}
+.nav3 ul li a{
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    display: block;
+}
+.nav3 ul li a:hover{
+    color: var(--primary);
+}
+.nav3 ul li i{
+    color: var(--primary);
+    margin: 0px 5px;
+}
+.nav3 ul ul{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 0;
+    display: none;
+}
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+.nav3 ul li:hover>ul{
+    display: block;
+}
+.featured{
+    width: 100%;
+    height: 60vh;
+    background:linear-gradient(to right,rgba(0,0,0,1)20%,rgba(255,255,255,0.2)),
+               url(mens1.jpg) ;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.featuredtext{
+    max-width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-family: "Akaya Kanadaka", system-ui;
+}
+.featuredtext button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    margin: 20px 0px;
+    color: white;
+}
+.new{
+    padding: 50px 100px;
+}
+.product{
+    text-align: center;
+}
+.product h1{
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.product h1 span{
+    color: var(--secondary);
+}
+.product p{
+    color: gray;
+    margin: 15px 0;
+}
+
+.cartcontener{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 4rem 0;
+}
+.cartcontener .cart{
+    flex-basis:20%;
+    padding: 0.8rem;
+    position: relative;
+}
+.cart img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.cart i{
+    color: goldenrod;
+    margin: 10px 0;
+}
+.cart button{
+    color: white;
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.cart:hover img, .cart:hover h1{
+    width: 80%;
+    color: var(--primary);
+}
+.cart::before{
+    content: '20% off';
+    width: 27%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    padding: 0px 4px;
+    transform: rotate(-20deg);
+    border-radius: 3px;
+}
+
+.new{
+    padding: 50px 100px;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.new .swiper {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .new .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+  }
+
+ .new .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer{
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  footer div{
+    flex-basis: 30%;
+  }
+  footer h1{
+    letter-spacing: 0.5rem;
+  }
+  footer h1 span{
+    color: var(--primary);
+  }
+  footer p{
+    font-size: 1rem;
+    margin: 0px 5px;
+  }
+
+  @media only screen and (max-width:769px){
+    .nav1 {
+        position: relative;
+        z-index: 2;
+        background-color: white;
+    }
+
+    .right i{
+        font-size: 15px;
+        margin: 0px 5px;
+    }
+
+    .nav2{
+        width: 100%;
+        height: 80px;
+
+    }
+
+    .nav2 .nav2left i{
+        margin-left:0px ;
+    }
+    .nav2 .nav2center h1{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .nav2 .nav2center p{
+        color: gray;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .nav2 .nav2right i{
+        margin: 0px 6px;
+    }
+    .nav3{
+        display: none;
+    }
+    
+    .featured{
+        background-attachment: fixed;
+    }
+
+    .new{
+        padding: 0px 50px;
+    }
+    .product{
+        text-align: center;
+    }
+    .product h1{
+        color: var(--primary);
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .product h1 span{
+        color: var(--secondary);
+    }
+    .product p{
+        color: gray;
+        margin: 15px 0;
+    }
+    
+    .cartcontener{
+        margin: 2rem 0;
+    }
+    .cartcontener .cart{
+        flex-basis:100%;
+        padding: 0.8rem;
+        position: relative;
+        text-align: center;
+    }
+    .cart img{
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+    .cart i{
+        color: goldenrod;
+        margin: 10px 0;
+    }
+    .cart button{
+        color: white;
+        background: var(--secondary);
+        border: none;
+        outline: none;
+        margin-top: 15px;
+        padding: 5px 20px;
+        border-radius: 3px;
+    }
+    
+  }
